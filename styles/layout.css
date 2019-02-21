@@ -1,0 +1,759 @@
+@media only screen and (min-width: 200px) {
+
+body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+        "title title"
+        "menu  menu"
+        "main  main"
+        "main  main"
+        "voertuig-omgeving   voertuig-omgeving"
+        "voorraden-grid voorraden-grid"
+        "tools tools"
+        "foot  foot "; 
+}
+
+.header{
+  grid-area: title;
+  background-image: url(../images/headergif.gif);
+   background-size: cover;
+  padding: 4%;
+} 
+
+
+footer{
+  text-align: center;
+}
+
+.titels{
+  text-align: center;
+  font-size: 25px;
+}
+
+.flex-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column wrap;
+   align-content: center;
+  }
+
+
+.logo1 {
+  width: 130%;
+}
+
+.brandstof-titel{
+  font-size: 30px;
+  text-align: center;
+  margin-top: -13px;
+}
+
+.voertuig-info-div{
+  width: 100%;
+  border: 5px solid black;
+  padding: 25px;
+  margin: 25px;
+}
+
+#Helebrandstofbar{
+ width: 100%;
+ background-color: black;
+  border-radius: 0.9em;
+}
+    
+#brandstofpercentageteller{
+  width: 33%;
+  height: 40px;
+  background-color: #00b8fe;
+  background-color: #41dcf4;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  font-weight: bold;
+   border-radius: 0.9em;
+}
+
+.brandstofknop{
+  box-sizing: border-box;
+
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 0.9em;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align:center;
+  height: 50px;
+background-color: #3498db;
+  border-color: $blue;
+  color: #fff;
+}
+
+.brandstofknop:hover{
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.brandstofknop-div{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#snelheidsmeter{
+  width: 100%;
+}
+
+
+
+
+.zwaartekrachtpic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 104%;
+}
+
+.afstand-tijd{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 104%;
+}
+
+
+
+.atmosfeerpic{
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 104%;
+}
+
+
+.main{
+  grid-area: main;
+}
+
+#menu {
+  grid-area: menu;
+}
+
+.voertuig-omgeving {
+  grid-area: voertuig-omgeving;
+}
+
+
+
+.g-force-animatie-div{
+margin-left: 36%;
+
+}
+
+
+.container {
+  height: 100px;
+  width: 100px;
+  position: relative
+}
+
+.g-force-grid {
+  overflow: hidden;
+  border: 5px solid white;
+  height: 100%;
+  width: 100%;
+}
+
+.g-force-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+}
+
+.g-force-line-vertical {
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+}
+
+.g-force-red-ball {
+  -webkit-animation: xAxis 10.5s infinite cubic-bezier(0.20, 0.01, 0.21, 1);
+  animation: xAxis 10.5s infinite cubic-bezier(0.50, 0.50, 0.21, 0.5);
+}
+
+
+
+.g-force-red-ball::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: red;
+  -webkit-animation: yAxis 10.5s infinite cubic-bezier(0.3, 0.15, 0.07, 1.64);
+  animation: yAxis 10.5s infinite cubic-bezier(0.3, 1.64);
+}
+
+@-webkit-keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@-webkit-keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+
+@keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+
+}
+
+
+
+.voorraden-grid {
+  grid-area: voorraden-grid;
+}
+
+.tools {
+  grid-area: tools;
+  background-color: rgb(19, 67, 109);
+
+}
+
+.foot {
+  grid-area: foot;
+}
+
+.omzetknoppen{
+ width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 20px;
+  margin: 0px auto;
+  margin-top: 50px;
+  transition: transform 2s;
+}
+
+
+
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+  display: flex;
+  padding: 1em;
+  margin: 0.4em;
+  list-style: none;
+  justify-content: center;
+  /*border-radius: 0.4em;*/
+  border-bottom: 1px solid black;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+}
+
+nav ul li:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+nav > ul > li > a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+header { 
+  display:flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.menutoggle {
+  margin-left: auto;
+}
+
+.menutoggle a {
+  font-size: 3em;
+  color: black;
+  text-decoration: none;
+}
+
+.active {
+  max-height: 400px;
+  transition: max-height 1.5s;
+}
+
+.inactive {
+  max-height: 0px;
+  transition: max-height 0.9s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 580px) and (max-width: 1024px){
+
+  body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+        "title title"
+        "menu  menu"
+        "main  main"
+        "main  main"
+        "voertuig-omgeving   voertuig-omgeving"
+        "voorraden-grid voorraden-grid"
+        "tools tools"
+        "foot"; 
+}
+
+  nav ul {
+    flex-flow: row /*wrap*/;
+  }
+  nav ul li {
+    padding: 0.5em;
+  }
+
+  nav ul li {
+    padding: 0.5em;
+    border: unset;
+  }
+
+.menutoggle {
+  display: none;
+}
+
+.active, .inactive {
+  max-height: unset;
+}
+
+
+
+.voertuig-info-div{
+  width: 50%;
+  border: 5px solid black;
+  padding: 25px;
+  margin: 25px;
+}
+
+
+.omzetknoppen{
+ width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 20px;
+  margin: 0px auto;
+  margin-top: 50px;
+  transition: transform 2s;
+}
+
+p{
+  text-align: center;
+  color: white
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+
+.gauge-text {
+  color: white;
+  padding-bottom: 100px;
+}
+
+text{
+  color: white;
+}
+
+/* De onderstaande code is voor de G-Force animatie */
+
+.g-force-animatie-div{
+margin-left: 36%;
+
+}
+
+
+.container {
+  height: 100px;
+  width: 100px;
+  position: relative
+}
+
+.g-force-grid {
+  overflow: hidden;
+  border: 5px solid white;
+  height: 100%;
+  width: 100%;
+}
+
+.g-force-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+}
+
+.g-force-line-vertical {
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+}
+
+.g-force-red-ball {
+  -webkit-animation: xAxis 10.5s infinite cubic-bezier(0.20, 0.01, 0.21, 1);
+  animation: xAxis 10.5s infinite cubic-bezier(0.50, 0.50, 0.21, 0.5);
+}
+
+.g-force-red-ball::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: red;
+  -webkit-animation: yAxis 10.5s infinite cubic-bezier(0.3, 0.15, 0.07, 1.64);
+  animation: yAxis 10.5s infinite cubic-bezier(0.3, 1.64);
+}
+
+@-webkit-keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@-webkit-keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+
+@keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1025px){
+
+  body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+        "title title"
+         "menu menu"
+        "main  voertuig-omgeving"
+        "voorraden-grid  tools"
+        "foot  foot"; 
+}
+
+  nav ul {
+    flex-flow: row /*wrap*/;
+  }
+  nav ul li {
+    padding: 0.5em;
+  }
+
+  nav ul li {
+    padding: 0.5em;
+    border: unset;
+  }
+
+.menutoggle {
+  display: none;
+}
+
+#menu{
+  display: none;
+}
+
+.active, .inactive {
+  max-height: unset;
+}
+
+
+
+.voertuig-info-div{
+  width: 70%;
+  border: 5px solid black;
+  padding: 25px;
+  margin: 25px;
+}
+
+
+.omzetknoppen{
+ width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 20px;
+  margin: 0px auto;
+  margin-top: 50px;
+  transition: transform 2s;
+}
+
+p{
+  text-align: center;
+  color: white
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+
+.gauge-text {
+  color: white;
+  padding-bottom: 100px;
+}
+
+text{
+  color: white;
+}
+
+/* De onderstaande code is voor de G-Force animatie */
+
+.g-force-animatie-div{
+margin-left: 36%;
+
+}
+
+
+.container {
+  height: 100px;
+  width: 100px;
+  position: relative
+}
+
+.g-force-grid {
+  overflow: hidden;
+  border: 5px solid white;
+  height: 100%;
+  width: 100%;
+}
+
+.g-force-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+}
+
+.g-force-line-vertical {
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+}
+
+.g-force-red-ball {
+  -webkit-animation: xAxis 10.5s infinite cubic-bezier(0.20, 0.01, 0.21, 1);
+  animation: xAxis 10.5s infinite cubic-bezier(0.50, 0.50, 0.21, 0.5);
+}
+
+.g-force-red-ball::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: red;
+  -webkit-animation: yAxis 10.5s infinite cubic-bezier(0.3, 0.15, 0.07, 1.64);
+  animation: yAxis 10.5s infinite cubic-bezier(0.3, 1.64);
+}
+
+@-webkit-keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@-webkit-keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+
+@keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+
+
+
+
+
+
+
+
+div#counter {
+  font-weight: normal;
+  letter-spacing:5px;
+  padding: 6px;
+  font-size: 1.8em;
+  font-family: 'Gill Sans';
+  width: 500px;
+  text-align: center;
+  height: auto;
+  color: #333;
+  display:block;
+  margin:0px auto;
+  vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

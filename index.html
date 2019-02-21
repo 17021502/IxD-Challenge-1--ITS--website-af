@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<title>ITS - SpaceX</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+		<link type="text/css" href="styles/main.css" rel="stylesheet" />
+		<link type="text/css" href="styles/layout.css" rel="stylesheet" />
+	</head>
+	<body>
+	  	<header class="grid-item header">
+	  		<div class="images-div">
+				<img alt="SpaceX" class="logo1" src="images/logo1.png" />
+			</div>
+	  		<div class="menutoggle">
+	  				<a href="#">&#9776;</a>
+	  		</div>
+	  	</header>
+	    <nav id="menu" class="grid-item menu">
+	    	<ul>
+	    		<li><a href="#voertuiginformatie">Voertuiginformatie</a></li>
+	    		<li><a href="#voertuig-omgeving">Voertuig omgeving</a></li>
+	    		<li><a href="#Voorraden">Voorraden</a></li>
+	    		<li><a href="#Tools">Tools</a></li> 		
+	    	</ul>
+	    </nav>
+	    <main class="grid-item main">
+	    	<h3 id="voertuiginformatie" class="titels">Voertuig Informatie</h3>
+	    	<div class="flex-container">
+	    		<div class="voertuig-info-div"><p class="brandstof-titel">Brandstof</p>
+
+					<div id="Helebrandstofbar">
+					    <div id="brandstofpercentageteller">Onbekend</div>
+					</div>
+					<br/>
+					<div class="brandstofknop-div"><button class="brandstofknop" onclick="brandstofpercentage()">Brandstof Niveau Berekenen</button></div>
+					</div>
+				<div class="voertuig-info-div"><p class="brandstof-titel">Snelheid</p>
+		    	 <canvas id="snelheidsmeter"></canvas></div>
+				<div class="voertuig-info-div"><p class="brandstof-titel">Acceleratie</p>
+		    	<a href="#">		    			<div class="gauge-chart">
+				<svg viewBox="0 0 80 40" class="gauge">
+					<circle class="donut-ring" cx="40" cy="40" r="31.8309886184" fill="transparent" stroke="#d2d3d4" stroke-width="15"></circle>
+					<circle class="donut-segment" cx="40" cy="40" r="31.8309886184" fill="transparent" stroke="#41dcf4" stroke-width="15" stroke-dasharray="92 115" stroke-dashoffset="-100"></circle>
+		<text x="28" y="37.5" class="gauge-text">95%</text>
+	</svg>
+</div></a></div>
+		 <div class="voertuig-info-div"><p class="brandstof-titel">G-force</p>
+		 	<div class="g-force-animatie-div">
+		 	<div class="container">
+			  <div class="g-force-grid">
+			    <div class="g-force-line" style="top: 20px;"></div>
+			    <div class="g-force-line" style="top: 40px;"></div>
+			    <div class="g-force-line" style="top: 60px;"></div>
+			    <div class="g-force-line" style="top: 80px;"></div>
+			    <div class="g-force-line-vertical" style="left: 20px;"></div>
+			    <div class="g-force-line-vertical" style="left: 40px;"></div>
+			    <div class="g-force-line-vertical" style="left: 60px;"></div>
+			    <div class="g-force-line-vertical" style="left: 80px;"></div>
+			  </div>
+			  <div class="g-force-red-ball"></div>
+			</div>
+			</div>
+		  <a href="#"><p id="G-force-tekst"></p></a></div>	
+	    </div>
+	    </main>
+	    <aside class="grid-item voertuig-omgeving">
+	    	<h2 id="voertuig-omgeving" class="titels">Voertuig omgeving</h2>
+	    	<div class="flex-container">
+	    		<div class="voertuig-info-div"><p class="brandstof-titel">Zwaartekracht</p>
+		    	<div id="zwaartekrachtGrafiek" style="height: 370px; width:100%;"></div></div>
+				<div class="voertuig-info-div"><p class="brandstof-titel">Afstand afgelegd over tijd</p>
+		    		<p class="afstand-tijd-tekst">Verstreken tijd in (s): <span id=seconds></span></p>
+		    		<p class="afstand-tijd-tekst">Afgelegde afstand in (m/s):</p>
+		    	</div>
+		    	<div class="voertuig-info-div"><p class="brandstof-titel">Atmosfeer</p>
+	    	<h2 class="atmosfeer-tekst">Nitrogen</h2>
+				<div class="bar">
+				  <div class="binnenste-bar bar-2.7" data-percent="2.7%"></div>
+				</div>
+			<h2 class="atmosfeer-tekst">Carbon Dioxide</h2>
+				<div class="bar">
+					  <div class="binnenste-bar bar-95" data-percent="95%"></div>
+				</div>
+			<h2 class="atmosfeer-tekst">Argon</h2>
+				<div class="bar">
+				  <div class="binnenste-bar bar-1.6" data-percent="1.6%"></div>
+				</div></div>
+		</div>
+	    </aside>
+		    <aside class="grid-item voorraden-grid">
+				<h2 id="Voorraden" class="titels">Voorraden</h2>
+		    	<div class="flex-container">
+		    		<div class="voertuig-info-div">
+		    	<h2 class="voorraden-tekst">Italiaans</h2>
+					<div class="bar">
+					  <div class="binnenste-bar bar-70" data-percent="70%"></div>
+					</div>
+				<h2 class="voorraden-tekst">Japans</h2>
+					<div class="bar">
+						  <div class="binnenste-bar bar-80" data-percent="80%"></div>
+					</div>
+				<h2 class="voorraden-tekst">Grieks</h2>
+					<div class="bar">
+					  <div class="binnenste-bar bar-40" data-percent="40%"></div>
+					</div>
+
+				<h2 class="voorraden-tekst">Beschikbaar Water niveau</h2>
+					<div class="bar">
+					  <div class="binnenste-bar bar-82" data-percent="82%"></div>
+					</div>
+		    	</div>
+		    </div>
+		    </aside>
+	    	    <div class="grid-item tools">
+			    	<h2 id="Tools" class="titels">Tools</h2>
+			    	<div class="flex-container">
+		    		<div class="voertuig-info-div"><p class="brandstof-titel">Zwaartekracht omzetten</p>
+			    	<div><img alt="zwaartekracht omzet knop" class="omzetknoppen" src="images/zwaartekrachtomzettenpic.png"></div></div>
+					<div class="voertuig-info-div"><p class="brandstof-titel">Mars naar Aardse afstand omzetten</p>
+			    	<div><img alt="mars naar aarde omzet knop" class="omzetknoppen" src="images/marsnaaraardepic.png"></div></div>
+			    </div>
+			</div>
+	    <footer class="grid-item foot">
+	    	<p>SpaceX 2019</p>
+	    </footer>
+		  <script src="scripts/main.js"></script>
+		  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		  <script src="https://www.gstatic.com/charts/loader.js"></script>
+ 	</body>
+</html>
+

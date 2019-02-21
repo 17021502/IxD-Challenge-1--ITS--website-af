@@ -1,0 +1,204 @@
+html {
+	box-sizing: border-box;
+}
+
+*, 
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+
+body{
+	background-color: #003B59;
+	color: #FFFFFF;
+  font-family: avenir, sans-serif;
+}
+
+.titels{
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  background-color: rgba(50, 50, 50, 0.5);
+  font-family: 'Asap Condensed', verdana, sans-serif;
+  text-shadow: 1px 1px 1px #000;
+}
+
+
+h2, h3 {
+  font-size: 1em;
+  font-weight: normal;
+  background-color: black;
+  padding: 0.4em;
+  border-radius: 0.2em;
+  font-family: 'Asap Condensed', verdana, sans-serif;
+  text-shadow: 1px 1px 1px #000;
+
+}
+h3 {
+  font-size: 0.8em;
+  background-color: black;  
+}
+
+.header, .main, .voertuig-omgeving, .voorraden-grid, .tools, .foot{
+  padding: 0.2em 1em;
+}
+
+.title {
+  background-color: white;
+}
+
+.header {
+    background-color: white;
+
+}
+#menu {
+    background-color: #003B59;
+}
+.main {
+    background-color: rgb(19, 67, 89);
+       background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+
+}
+.ad1 {
+    background-image: url(../images/voertuigomgevingbackground.jpg);
+           background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+.voorraden-grid {
+    background-color: #34495e;
+    
+}
+.foot {
+    background: #0e1112;
+}
+
+img {
+  width: 100%;
+  margin: 0;
+}
+
+footer {
+ background: #A9A9A9;
+ color: white;
+}
+
+.images-div {
+  width: 70%;
+  height: 50%
+}
+
+.competitie2016 {
+  width: 70%;
+  text-align: center;
+}
+
+
+  q {
+    width: 6em;
+    float: right;
+    font-size: 1.4em;
+    padding: 0.5em;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+
+
+
+#G-force-tekst{
+  font-size:40px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+
+
+.omzetknoppen:active{
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+
+
+.afstand-tijd-tekst {
+  text-align: center;
+  font-size: 20px;
+}
+
+
+.chart {
+    background: #eee;
+    padding: 3px;
+}
+
+.chart div {
+  width: 0;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 5px;
+  color: white;
+  box-shadow: 2px 2px 2px #666;
+}
+
+
+
+.atmosfeer-tekst{
+  background-color: #003B59;
+  color: white;
+}
+
+
+
+
+
+.voorraden-tekst{
+  background-color: #34495e;
+}
+
+
+.bar {
+  background-color: #f2f2f1;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 40px;
+    font-weight: 700;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 0 0 20px 0;
+  }
+ 
+
+
+.binnenste-bar {
+  background-color: #41dcf4;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: width 3000ms linear;
+}
+
+.binnenste-bar:after {
+  position: absolute;
+  left: 20.5%;
+  content: attr(data-percent);
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
